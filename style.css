@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 /* Body tag and bg img */
-* {
-  /* margin: 0;
-  padding: 0; */
-  /*  */
-}
 
 body {
   font-family: "Varela Round", sans-serif;
@@ -48,7 +43,6 @@ a:hover {
   color: rgb(10, 124, 19);
 }
 
-
 /* The main section -who holds each page  */
 .main {
   font-size: 1.2rem;
@@ -64,9 +58,6 @@ a:hover {
   border-radius: 1rem;
   min-height: 80vh;
 }
-
-
-
 
 .text {
   background: white;
@@ -89,28 +80,28 @@ a:hover {
 }
 
 /* The contact page */
-.six>.text {
+.six > .text {
   display: flex;
   justify-content: space-between;
 }
 
-.six>.text form {
+.six > .text form {
   display: flex;
   flex-direction: column;
   width: 40%;
   height: 100%;
 }
 
-.six>.text form div {
+.six > .text form div {
   margin-top: 1.5rem;
 }
 
-.six>.text form h2 {
+.six > .text form h2 {
   width: 100%;
 }
 
-.six>.text form div input,
-.six>.text form div textarea {
+.six > .text form div input,
+.six > .text form div textarea {
   width: 90%;
   padding: 10px 20px;
   border: none;
@@ -120,20 +111,20 @@ a:hover {
   font-size: large;
 }
 
-.six>.text form div label {
+.six > .text form div label {
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin: 0.5rem;
 }
 
-.six>.text form div textarea {
+.six > .text form div textarea {
   resize: none;
   height: 70px;
   overflow: hidden;
 }
 
-.six>.text form div input:focus,
-.six>.text form div textarea:focus {
+.six > .text form div input:focus,
+.six > .text form div textarea:focus {
   outline: none;
 }
 
@@ -147,7 +138,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.six>.text form #submitBtn {
+.six > .text form #submitBtn {
   margin: 2rem;
   font-family: "Varela Round", sans-serif;
   letter-spacing: 2px;
@@ -159,7 +150,7 @@ input[type="number"] {
   background-color: rgba(53, 126, 62, 0.534);
 }
 
-.six>.text form #submitBtn:hover {
+.six > .text form #submitBtn:hover {
   text-shadow: black;
   opacity: 0.8;
   background-color: rgb(27, 83, 32);
@@ -211,16 +202,13 @@ input[type="number"] {
   background-image: url(./img/sky.jpg);
 }
 
-
-
 .toggler {
   visibility: hidden;
 }
 
 /* Media queries */
 
-@media (min-width:1000px) {
-
+@media (min-width: 1000px) {
   .container:nth-child(even) {
     flex-direction: row-reverse;
   }
@@ -242,11 +230,10 @@ input[type="number"] {
   header ul li {
     padding: 0.2rem 1.5rem;
   }
-
 }
 
 @media (max-width: 1000px) {
-  body{
+  body {
     font-size: 0.5rem;
   }
   .soJockImg {
@@ -257,7 +244,6 @@ input[type="number"] {
   #img3 {
     width: 90%;
   }
-
 
   .main {
     margin-top: 3rem;
@@ -277,22 +263,20 @@ input[type="number"] {
     flex-direction: column;
   }
 
-
-  .six>.text form {
+  .six > .text form {
     display: none;
   }
 
-  .six>.text .contactInfo {
+  .six > .text .contactInfo {
     width: 100%;
     height: 100vh;
     text-align: center;
     margin-top: 1rem;
   }
 
-  .six>.text .contactInfo h2 {
+  .six > .text .contactInfo h2 {
     margin-bottom: 4rem;
   }
-
 
   .img {
     width: 100%;
@@ -331,18 +315,14 @@ input[type="number"] {
     opacity: 1;
   }
 
-
-
   .menu-wrap {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-
   }
 
   .menu-wrap .toggler {
-
     visibility: visible;
     position: absolute;
     top: 0;
@@ -355,7 +335,6 @@ input[type="number"] {
   }
 
   .menu-wrap .hamburger {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -370,8 +349,7 @@ input[type="number"] {
   }
 
   /* Hamburger Line */
-  .menu-wrap .hamburger>div {
-
+  .menu-wrap .hamburger > div {
     position: relative;
     flex: none;
     width: 100%;
@@ -384,9 +362,9 @@ input[type="number"] {
   }
 
   /* Hamburger Lines - Top & Bottom */
-  .menu-wrap .hamburger>div::before,
-  .menu-wrap .hamburger>div::after {
-    content: '';
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
     position: absolute;
     z-index: 1;
     top: -10px;
@@ -396,38 +374,38 @@ input[type="number"] {
   }
 
   /* Moves Line Down */
-  .menu-wrap .hamburger>div::after {
+  .menu-wrap .hamburger > div::after {
     top: 10px;
   }
 
   /* Toggler Animation */
-  .menu-wrap .toggler:checked+.hamburger>div {
+  .menu-wrap .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
   }
 
   /* Turns Lines Into X */
-  .menu-wrap .toggler:checked+.hamburger>div:before,
-  .menu-wrap .toggler:checked+.hamburger>div:after {
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
   }
 
   /* Rotate On Hover When Checked */
-  .menu-wrap .toggler:checked:hover+.hamburger>div {
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
     transform: rotate(225deg);
   }
 
   /* Show Menu */
-  .menu-wrap .toggler:checked~.menu {
+  .menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
   }
 
-  .menu-wrap .toggler:checked~.menu>div {
+  .menu-wrap .toggler:checked ~ .menu > div {
     transform: scale(1);
     transition: transform 0.4s ease 0.4s;
   }
 
-  .menu-wrap .toggler:checked~.menu>div>div {
+  .menu-wrap .toggler:checked ~ .menu > div > div {
     opacity: 1;
     transition: opacity 0.5s ease 0.5s;
   }
@@ -445,7 +423,7 @@ input[type="number"] {
     justify-content: center;
   }
 
-  .menu-wrap .menu>div {
+  .menu-wrap .menu > div {
     background: rgba(7, 51, 26, 0.425);
     border-radius: 50%;
     width: 400vw;
@@ -458,17 +436,11 @@ input[type="number"] {
     transition: all 0.4s ease-in-out;
   }
 
-  .menu-wrap .menu>div>div {
+  .menu-wrap .menu > div > div {
     text-align: center;
     max-width: 90vw;
     max-height: 100vh;
     opacity: 0;
     transition: opacity 0.4s ease;
   }
-
-
-
-
-
-
 }
