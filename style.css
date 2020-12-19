@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+body {
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgba(53, 126, 62, 0.534);
+  box-sizing: border-box;
+  color: rgb(27, 83, 32);
+  position: relative;
+}
+
+#backImg {
+  background-image: url(./img/sky.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: -2;
+}
+
+a {
+  color: black;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  letter-spacing: 0.1rem;
+}
+
+#bioLink {
+  color: rgb(10, 124, 19);
+}
+
+a:hover {
+  color: grey;
+  text-shadow: black;
+  opacity: 0.8;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5rem 0;
+  min-width: 960px;
+  max-width: 70%;
+  margin: 1rem auto;
+  background: white;
+  border-radius: 20rem;
+}
+
+header ul li {
+  padding: 0.2rem 1.5rem;
+}
+
+.main {
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  overflow: auto;
+  max-width: 80%;
+  min-height: 80vh;
+}
+
+.container {
+  overflow: auto;
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  min-height: 80vh;
+}
+
+.container:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.soJockImg {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding-right: 2rem;
+}
+
+.six > .text{
+  display: flex;
+  justify-content: space-between;
+}
+
+.six>.text form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height:100%;
+
+}
+
+.six>.text form div{
+  margin-top:1.5rem;
+}
+.six>.text form h2{
+width: 100%;
+
+}
+
+.six>.text form div input,
+.six>.text form div textarea {
+
+  width: 90%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(53, 126, 62, 0.233);
+  font-family: "Varela Round", sans-serif;
+  font-size: large;
+}
+.six > .text form div label{
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 0.5rem;
+  
+}
+
+.six>.text form div textarea {
+  resize: none; 
+  height: 70px;
+  overflow:hidden
+}
+
+.six>.text form div input:focus,
+.six>.text form div textarea:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.six>.text form #submitBtn {
+  margin:2rem;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 2px;
+  align-self: flex-end;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: rgba(53, 126, 62, 0.534);
+}
+
+.six>.text form #submitBtn:hover {
+  text-shadow: black;
+  opacity: 0.8;
+  background-color: rgb(27, 83, 32);
+  color: white;
+}
+
+ .contactInfo{
+width: 50%;
+}
+#contactInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+}
+
+.text {
+  background: white;
+  width: 70%;
+  padding: 0.5rem 2rem;
+}
+
+.text ul {
+  list-style-type: circle;
+}
+
+.img {
+  width: 30%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+}
+
+#img1 {
+  background-image: url(./img/weeds.jpg);
+}
+
+#img2 {
+  background-image: url(./img/leaves.jpg);
+}
+
+#img3 {
+  max-width: 100%;
+}
+
+#img4 {
+  background-image: url(./img/trees.jpg);
+}
+
+#img5 {
+  background-image: url(./img/rocks.jpg);
+}
+
+#img6 {
+  background-image: url(./img/sky.jpg);
+}
