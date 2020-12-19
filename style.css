@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+/* Body tag and bg img */
+* {
+  /* margin: 0;
+  padding: 0; */
+  /*  */
+}
+
 body {
   font-family: "Varela Round", sans-serif;
   margin: 0;
@@ -22,50 +29,34 @@ body {
   z-index: -2;
 }
 
+/* Utilities */
 a {
   color: black;
-
   font-weight: 600;
   text-decoration: none;
-
   letter-spacing: 0.1rem;
 }
 
-#bioLink {
-  color: rgb(10, 124, 19);
-}
-
 a:hover {
-  color: grey;
+  color: rgb(27, 83, 32);
   text-shadow: black;
   opacity: 0.8;
 }
 
-header ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0.5rem 0;
-  min-width: 960px;
-  max-width: 70%;
-  margin: 1rem auto;
-  background: white;
-  border-radius: 20rem;
+/* The link tab in the Bioaorogani page */
+#bioLink {
+  color: rgb(10, 124, 19);
 }
 
-header ul li {
-  padding: 0.2rem 1.5rem;
-}
 
+/* The main section -who holds each page  */
 .main {
   font-size: 1.2rem;
   margin: 1rem auto;
-  overflow: auto;
   max-width: 80%;
-  min-height: 80vh;
 }
 
+/* Containr who holds text and img of each page */
 .container {
   overflow: auto;
   display: flex;
@@ -74,10 +65,20 @@ header ul li {
   min-height: 80vh;
 }
 
-.container:nth-child(even) {
-  flex-direction: row-reverse;
+
+
+
+.text {
+  background: white;
+  width: 70%;
+  padding: 0.5rem 2rem;
 }
 
+.text ul {
+  list-style-type: circle;
+}
+
+/* The soJock page img div  */
 .soJockImg {
   background: white;
   display: flex;
@@ -87,7 +88,8 @@ header ul li {
   padding-right: 2rem;
 }
 
-.six > .text{
+/* The contact page */
+.six>.text {
   display: flex;
   justify-content: space-between;
 }
@@ -96,21 +98,19 @@ header ul li {
   display: flex;
   flex-direction: column;
   width: 40%;
-  height:100%;
-
+  height: 100%;
 }
 
-.six>.text form div{
-  margin-top:1.5rem;
+.six>.text form div {
+  margin-top: 1.5rem;
 }
-.six>.text form h2{
-width: 100%;
 
+.six>.text form h2 {
+  width: 100%;
 }
 
 .six>.text form div input,
 .six>.text form div textarea {
-
   width: 90%;
   padding: 10px 20px;
   border: none;
@@ -119,17 +119,17 @@ width: 100%;
   font-family: "Varela Round", sans-serif;
   font-size: large;
 }
-.six > .text form div label{
+
+.six>.text form div label {
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin: 0.5rem;
-  
 }
 
 .six>.text form div textarea {
-  resize: none; 
+  resize: none;
   height: 70px;
-  overflow:hidden
+  overflow: hidden;
 }
 
 .six>.text form div input:focus,
@@ -143,12 +143,12 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 .six>.text form #submitBtn {
-  margin:2rem;
+  margin: 2rem;
   font-family: "Varela Round", sans-serif;
   letter-spacing: 2px;
   align-self: flex-end;
@@ -166,26 +166,19 @@ input[type=number] {
   color: white;
 }
 
- .contactInfo{
-width: 50%;
+/* The second part of the contact page */
+.contactInfo {
+  width: 50%;
 }
-#contactInfo{
+
+#contactInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 50%;
 }
 
-.text {
-  background: white;
-  width: 70%;
-  padding: 0.5rem 2rem;
-}
-
-.text ul {
-  list-style-type: circle;
-}
-
+/* Img proporties for each page */
 .img {
   width: 30%;
   background-repeat: no-repeat;
@@ -193,6 +186,7 @@ width: 50%;
   background-size: cover;
 }
 
+/* Each img for each page */
 #img1 {
   background-image: url(./img/weeds.jpg);
 }
@@ -201,18 +195,280 @@ width: 50%;
   background-image: url(./img/leaves.jpg);
 }
 
-#img3 {
+/* #img3 {
   max-width: 100%;
-}
+} */
 
 #img4 {
   background-image: url(./img/trees.jpg);
 }
 
 #img5 {
-  background-image: url(./img/rocks.jpg);
+  background-image: url(./img/rain.jpg);
 }
 
 #img6 {
   background-image: url(./img/sky.jpg);
+}
+
+
+
+.toggler {
+  visibility: hidden;
+}
+
+/* Media queries */
+
+@media (min-width:1000px) {
+
+  .container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* Header / Navbar */
+  header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0;
+    min-width: 960px;
+    max-width: 70%;
+    margin: 1rem auto;
+    background: white;
+    border-radius: 20rem;
+  }
+
+  header ul li {
+    padding: 0.2rem 1.5rem;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  body{
+    font-size: 0.5rem;
+  }
+  .soJockImg {
+    align-self: center;
+    width: 100%;
+  }
+
+  #img3 {
+    width: 90%;
+  }
+
+
+  .main {
+    margin-top: 3rem;
+  }
+
+  .text {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .three {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .six>.text form {
+    display: none;
+  }
+
+  .six>.text .contactInfo {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .six>.text .contactInfo h2 {
+    margin-bottom: 4rem;
+  }
+
+
+  .img {
+    width: 100%;
+    height: 150px;
+  }
+
+  header ul {
+    background: rgba(8, 56, 14, 0.753);
+    border-radius: 15rem;
+    height: 65vh;
+    width: 50vw;
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header ul li {
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  header ul li a {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  header ul li a:hover {
+    color: rgb(13, 155, 32);
+    text-shadow: black;
+    opacity: 1;
+  }
+
+
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+  }
+
+  .menu-wrap .toggler {
+
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    background: rgba(10, 68, 10, 0.637);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger>div {
+
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger>div::before,
+  .menu-wrap .hamburger>div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+  .menu-wrap .hamburger>div::after {
+    top: 10px;
+  }
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked+.hamburger>div {
+    transform: rotate(135deg);
+  }
+
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked+.hamburger>div:before,
+  .menu-wrap .toggler:checked+.hamburger>div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover+.hamburger>div {
+    transform: rotate(225deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked~.menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked~.menu>div {
+    transform: scale(1);
+    transition: transform 0.4s ease 0.4s;
+  }
+
+  .menu-wrap .toggler:checked~.menu>div>div {
+    opacity: 1;
+    transition: opacity 0.5s ease 0.5s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu>div {
+    background: rgba(7, 51, 26, 0.425);
+    border-radius: 50%;
+    width: 400vw;
+    height: 400vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .menu-wrap .menu>div>div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+
+
+
+
+
 }
